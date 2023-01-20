@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins&display=swap');
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  line-height: 24px;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {  
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f2841;
+  color: #666666;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+  color: inherit;
+  margin: 1rem;
+}
+
+a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  display: inline-block;  
+}
+
+a:focus {
+  outline: none;
+  border-color: #00cede;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 206, 222, 0.6);
+}
+
+.logo {
+  width: 110px;
+}
+
+.form_container {
+  width: 320px;
+  height: 250px;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: width 1s, height 1s;
+}
+
+
+.formStep_container {
+  padding: 1.5rem;
+  width: 100%;
+  animation: fadeIn 400ms;
+}
+
+/* Form Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.input_container {
+  flex-grow: 0.5;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666666;
+}
+
+.input_container .label_personalInfo {
+  display: none;
+}
+
+.input_container > label {
+  color: #0f2841;
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.2;
+}
+
+.input_container > input,
+.input_container > select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  color: #666666;
+}
+
+.input_container > option {
+  accent-color: red;
+}
+
+.input_container > input:hover,
+.input_container > input:focus,
+.input_container > select:hover,
+.input_container > select:focus {
+  cursor: pointer;
+  border-color: #00cede;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 206, 222, 0.6);
+}
+
+
+
+/* Button Styles */
+button {
+  width: 90px;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  font-family: inherit;
+  font-size: 1.5em;
+  font-weight: 700;
+  background-color: #0f2841;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+button:hover, button:focus {
+  background-color: #fb5a4b;
+  color: #ffffff;
+  outline: none;
+}
+
+
+
+/* DataGuard Styles */
+.mld-pc-option-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mld-pc-option-container:first-of-type {
+  width: 110px;
+}
+
+.mld-pc-block--preferences {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.mld-pc-block--preferences > h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: inherit;
+  line-height: 2;
+  margin: 0;
+}
+
+.mld-pc-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.mld-pc-toggle > input {
+  margin: 0 0.5rem 0 0;
+}
+
+.mld-pc-toggle > input:focus {
+  outline: none;
+  margin: 0 0.5rem 0 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 206, 222, 0.6);
+}
+
+.mld-pc-toggle > label {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+input[type='radio'] {
+  appearance: none;
+}
+
+input[type='radio']:after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #d1d3d1;
+  display: block;
+  cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+  content: '';
+  background-color: #fb5a4b;
+}
+
+input[type='checkbox'] {
+  accent-color: #fb5a4b;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.mld-pc-toggle > label {
+  margin-top: 0.2rem;
+}
+
+.mld-pc-statement > p {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0.2rem;
+}
+
+.mld-policy a {
+  font-size: 1.2rem;
+}
+
+.mld-pc-app__footer {
+  margin-top: 1rem;
+}
+
+.mld-pc-button--submit {
+  background-color: #0f2841;
+  margin-top: 0;
+}
+
+.mld-pc-button--submit:hover {
+  background-color: #fb5a4b;
+}
